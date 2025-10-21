@@ -1,5 +1,3 @@
-отредактируй это под формат readme.md
-
 # REST API Practice Application
 
 Одностраничное веб-приложение для отработки CRUD-операций с REST API.  
