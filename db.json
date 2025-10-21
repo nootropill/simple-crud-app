@@ -1,0 +1,46 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "name": "Alice",
+      "email": "alice@example.com"
+    },
+    {
+      "id": "2",
+      "name": "Bob",
+      "email": "bob@example.com"
+    },
+    {
+      "id": "3",
+      "name": "Julia",
+      "email": "julia@example.com"
+    },
+    {
+      "id": "4",
+      "name": "Seryozha",
+      "email": "seryozha@example.com"
+    }
+  ],
+  "posts": [
+    {
+      "id": "4",
+      "userId": 2,
+      "title": "News",
+      "body": "Did you see current news?"
+    }
+  ],
+  "comments": [
+    {
+      "id": "1",
+      "postId": 1,
+      "name": "Commenter1",
+      "body": "ssss"
+    },
+    {
+      "id": "2",
+      "postId": 2,
+      "name": "Commenter2",
+      "body": "Thanks for sharing."
+    }
+  ]
+}

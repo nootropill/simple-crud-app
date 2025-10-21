@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>XMLHttpRequest</title>
+  <script src="./scripts/get-all-users.js" defer type="module"></script>
+  <script src="./scripts/get-specific-user.js" defer type="module"></script>
+  <script src="./scripts/create-new-user-post.js" defer type="module"></script>
+  <script src="./scripts/load-users-id.js" defer type="module"></script>
+  <script src="./scripts/update-comment.js" defer type="module"></script>
+  <script src="./scripts/delete-post.js" defer type="module"></script>
+
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <div class="wrapper">
+    <div class="content-box content-box__get-users">
+      <h2>Список всех пользователей</h2>
+      <button
+        class="content-box__users-button button"
+        type="button"
+      >
+        Получить
+      </button>
+    </div>
+
+    <div class="content-box content-box__get-user-by-id">
+      <h2>Поиск пользователя</h2>
+
+      <form id="findUserById">
+        <div class="input__wrapper">
+          <label for="id">user id:</label>
+          <input
+            id="id"
+            name="userId"
+            pattern="^[1-9]\d*$"
+            required
+          />
+        </div>
+        <button 
+          class="content-box__specific-users-button button" 
+          type="submit"
+        >
+          Найти
+        </button>
+      </form>
+    </div>
+
+    <div class="content-box content-box__add-new-post">
+      <h2>Создание нового поста</h2>
+      <form id="addNewPost">
+        <div class="add-new-post-wrapper select">
+          <label for="userId">Пользователь:</label>
+          <select name="userId" id="userId" class="userId" required>
+            <option value="" selected></option>
+          </select>
+        </div>
+
+        <div class="add-new-post-wrapper">
+          <label for="title">Title:</label>
+          <input name="title" type="text" id="title" />
+        </div>
+
+        <div class="add-new-post-wrapper">
+          <label for="body">Body:</label>
+          <textarea name="body" id="body"></textarea>
+        </div>
+        <button class="content-box__create-post button" type="submit">
+          Создать пост
+        </button>
+      </form>
+    </div>
+
+    <div class="content-box content-box__update-comment">
+      <h2>Обновить комментарий</h2>
+
+      <form id="updateComment">
+        <div class="updateComment-wrapper">
+          <label for="commentId">id коммента:</label>
+          <input 
+            id="commentId" 
+            name="id" 
+            type="number" required pattern="^[1-9]\d*$"/>
+        </div>
+
+        <div class="input__wrapper">
+          <label for="newBody">Новый текст:</label>
+          <textarea id="newBody" name="body" required></textarea>
+        </div>
+        
+        <button class="content-box__update-comment button" type="submit">Обновить</button>
+      </form>
+    </div>
+
+    <div class="content-box content-box__get-posts-by-userId">
+      <h2>Удалить пост</h2>
+      <form id="getPosts">
+          <div class="getPosts-wrapper">
+            <label for="userPostId">Пользователь:</label>
+            <select name="userId" id="userPostId" class="userId" required>
+              <option value="" selected></option>
+            </select>
+          </div>
+        <button class="content-box__find-user-posts button" type="submit">Найти</button>
+      </form>
+    </div>
+
+    <div class="content-box content-box__server-response box-invisible">
+    </div>
+  </div>
+</body>
+</html>
